@@ -1,7 +1,8 @@
-import {RestaurantName} from '../RestaurantName/RestaurantName.tsx';
+import React from 'react';
+import { RestaurantName } from '../RestaurantName/RestaurantName';
+import { RestaurantNameListProps } from '../../Models/interfaces.ts';
 
-// @ts-ignore
-export function RestaurantNameList({restaurantNames}) {
+export const RestaurantNameList: React.FC<RestaurantNameListProps> = ({ restaurantNames }) => {
   return (
     <div>
       {

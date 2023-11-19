@@ -1,3 +1,4 @@
+//TODO split interfaces into separate files for each related group of components
 export interface MenuItem {
   id: string;
   name: string;
@@ -17,4 +18,36 @@ export interface IRestaurant {
   name: string;
   menu: MenuItem[];
   reviews: Review[];
+}
+
+export interface RestaurantProps {
+  restaurant: IRestaurant
+}
+
+export interface RestaurantMenuListProps {
+  menuItems: MenuItem[];
+}
+
+export interface RestaurantMenuItemProps {
+  menu: MenuItem
+}
+
+export interface RestaurantNameProps {
+  title: string;
+}
+
+export interface RestaurantNameListProps {
+  restaurantNames: string[];
+}
+
+export interface RestaurantReviewsListProps {
+  reviews: Review[];
+}
+
+export interface RestaurantReviewsItemProps {
+  review: Review
+}
+
+export interface RestaurantsListProps {
+  restaurants?: IRestaurant[];
 }

@@ -1,12 +1,14 @@
-import {IRestaurant} from '../../Models/interfaces.ts'
-import {Restaurant} from '../Restaurant/Restaurant.tsx';
+import React from 'react';
+import { IRestaurant, RestaurantsListProps } from '../../Models/interfaces';
+import { Restaurant } from '../Restaurant/Restaurant';
 
 
-export function RestaurantsList(props: any) {
+
+export const RestaurantsList: React.FC<RestaurantsListProps> = ({ restaurants }) => {
   return (
     <ul>
       {
-        props.restarants?.map((restaurant: IRestaurant) => {
+        restaurants?.map((restaurant: IRestaurant) => {
           return <Restaurant restaurant={restaurant} />
         })
       }

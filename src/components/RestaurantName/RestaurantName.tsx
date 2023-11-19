@@ -1,7 +1,7 @@
+import React from 'react';
+import { RestaurantNameProps } from '../../Models/interfaces.ts';
 
-
-// @ts-ignore
-export function RestaurantName({title}) {
+export const RestaurantName: React.FC<RestaurantNameProps> = ({ title }) => {
   return (
     <button>{title}</button>
   )

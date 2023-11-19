@@ -1,9 +1,7 @@
+import React from 'react';
+import { RestaurantMenuItemProps } from '../../Models/interfaces.ts';
 
-// @ts-expect-error
-
-
-export function RestaurantMenuItem({menu}) {
-  console.log(menu)
+export const RestaurantMenuItem: React.FC<RestaurantMenuItemProps> = ({menu}) => {
   return (
     <li>
       <div>

@@ -1,20 +1,16 @@
+import React from 'react';
+import { RestaurantMenuItem } from '../RestaurantMenuItem/RestaurantMenuItem.tsx';
+import { MenuItem, RestaurantMenuListProps } from '../../Models/interfaces.ts';
 
-
-
-import {RestaurantMenuItem} from '../RestaurantMenuItem/RestaurantMenuItem.tsx';
-import {MenuItem} from '../../Models/interfaces.ts';
-// @ts-ignore
-function RestaurantMenuList(props) {
-console.log(props)
+export const RestaurantMenuList: React.FC<RestaurantMenuListProps> = ({ menuItems }) => {
   return (
-    <ul>
+    <ol>
       {
-        props.restaurant?.map((menu:MenuItem) => {
+        menuItems?.map((menu: MenuItem) => {
           return <RestaurantMenuItem menu={menu} />
         })
       }
-    </ul>
+    </ol>
   );
 }
 
-export default RestaurantMenuList;

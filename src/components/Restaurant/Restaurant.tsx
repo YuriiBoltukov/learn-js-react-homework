@@ -1,20 +1,19 @@
+import React from 'react';
+import { RestaurantMenuList } from '../RestaurantMenuList/RestaurantMenuList.tsx';
+import { RestaurantReviewsList } from '../RestaurantReviewsList/RestaurantReviewsList.tsx';
+import { RestaurantProps } from '../../Models/interfaces.ts';
 
-import RestaurantMenuList from '../RestaurantMenuList/RestaurantMenuList.tsx';
-import {RestaurantReviewsList} from '../RestaurantReviewsList/RestaurantReviewsList.tsx';
-
-// @ts-ignore
-export function Restaurant({restaurant}) {
-
+export const Restaurant: React.FC<RestaurantProps> = ({restaurant}) => {
   return (
     <li>
       <h2>{restaurant.name}</h2>
       <div>
         <h3>Menu:</h3>
-        <RestaurantMenuList restaurant={restaurant.menu} />
+        <RestaurantMenuList menuItems={restaurant.menu} />
       </div>
       <div>
         <h3>Reviews:</h3>
-        <RestaurantReviewsList restaurant={restaurant.reviews} />
+        <RestaurantReviewsList reviews={restaurant.reviews} />
       </div>
     </li>
   );

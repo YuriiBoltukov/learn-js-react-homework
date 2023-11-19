@@ -1,13 +1,13 @@
+import React from 'react';
+import { RestaurantReviewsItemProps } from '../../Models/interfaces.ts';
 
-// @ts-ignore
-export function RestaurantReviewsItem({reviews}) {
-
+export const RestaurantReviewsItem: React.FC<RestaurantReviewsItemProps> = ({ review }) =>{
   return (
     <li>
       <div>
-        <p>Review: {reviews.text}</p>
-        <p>Name: {reviews.user}</p>
-        <p>Grade: {reviews.rating}</p>
+        <p>Review: {review.text}</p>
+        <p>Name: {review.user}</p>
+        <p>Grade: {review.rating}</p>
       </div>
     </li>
   );
