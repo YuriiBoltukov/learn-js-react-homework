@@ -1,18 +1,18 @@
-interface MenuItem {
+export interface MenuItem {
   id: string;
   name: string;
   price: number;
   ingredients: string[];
 }
 
-interface Review {
+export interface Review {
   id: string;
   user: string;
   text: string;
   rating: number;
 }
 
-export interface Restaurant {
+export interface IRestaurant {
   id: string;
   name: string;
   menu: MenuItem[];
