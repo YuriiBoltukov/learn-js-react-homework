@@ -4,7 +4,6 @@ import {Review} from '../../Models/interfaces.ts';
 
 // @ts-ignore
 export function RestaurantReviewsList(props) {
-
   return (
     <ul>
       {

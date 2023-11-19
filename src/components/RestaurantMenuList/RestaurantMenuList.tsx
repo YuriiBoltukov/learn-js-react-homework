@@ -9,7 +9,7 @@ console.log(props)
   return (
     <ul>
       {
-        props.menu?.map((menu:MenuItem) => {
+        props.restaurant?.map((menu:MenuItem) => {
           return <RestaurantMenuItem menu={menu} />
         })
       }

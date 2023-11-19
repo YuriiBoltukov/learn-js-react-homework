@@ -6,8 +6,10 @@ export function RestaurantMenuItem({menu}) {
   console.log(menu)
   return (
     <li>
-      <p>{menu.name}</p>
-      <p>{menu.price}</p>
+      <div>
+        <p>Meal: {menu.name}</p>
+        <p>Price: {menu.price}</p>
+      </div>
     </li>
   );
 }
