@@ -5,7 +5,6 @@ import { Restaurant } from '../Restaurant/Restaurant';
 
 
 export const Restaurants: React.FC<RestaurantsListProps> = ({ restaurants }) => {
-  console.log(restaurants)
   return (
     <ul>
       {

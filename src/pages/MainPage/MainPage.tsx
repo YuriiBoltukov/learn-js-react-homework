@@ -9,7 +9,6 @@ export function MainPage() {
   const filteredRestaurants = restaurants.filter(( item ) => {
    return  item.name === activeRestaurant
   })
-  console.log(filteredRestaurants)
   return (
     <>
       <RestaurantNames

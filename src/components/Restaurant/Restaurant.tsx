@@ -4,7 +4,6 @@ import { RestaurantReviews } from '../RestaurantReviews/RestaurantReviews.tsx';
 import { RestaurantProps } from '../../Models/interfaces.ts';
 
 export const Restaurant: React.FC<RestaurantProps> = ({restaurant}) => {
-  console.log(restaurant.menu)
   return (
     <>
       <h2>{restaurant.name}</h2>
