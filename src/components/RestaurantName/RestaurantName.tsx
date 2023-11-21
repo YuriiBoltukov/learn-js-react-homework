@@ -1,9 +1,9 @@
 import React from 'react';
 import { RestaurantNameProps } from '../../Models/interfaces.ts';
 
-export const RestaurantName: React.FC<RestaurantNameProps> = ({ title }) => {
+export const RestaurantName: React.FC<RestaurantNameProps> = ({ title, onClick }) => {
   return (
-    <button>{title}</button>
+    <button onClick={onClick}>{title}</button>
   )
 }
 

@@ -1,15 +1,15 @@
 import React from 'react';
-import { RestaurantReviewsItem } from '../RestaurantReviewsItem/RestaurantReviewsItem';
+import { RestaurantReview } from '../RestaurantReview/RestaurantReview.tsx';
 import { RestaurantReviewsListProps, Review } from '../../Models/interfaces';
 
-export const RestaurantReviewsList: React.FC<RestaurantReviewsListProps> = ({ reviews }) => {
+export const RestaurantReviews: React.FC<RestaurantReviewsListProps> = ({ reviews }) => {
   return (
     <ul>
       {
         reviews?.map((item: Review) => {
           return (
             <li>
-              <RestaurantReviewsItem review={item} />
+              <RestaurantReview review={item} />
             </li>
           )
         })

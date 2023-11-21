@@ -4,7 +4,8 @@ import { Restaurant } from '../Restaurant/Restaurant';
 
 
 
-export const RestaurantsList: React.FC<RestaurantsListProps> = ({ restaurants }) => {
+export const Restaurants: React.FC<RestaurantsListProps> = ({ restaurants }) => {
+  console.log(restaurants)
   return (
     <ul>
       {
