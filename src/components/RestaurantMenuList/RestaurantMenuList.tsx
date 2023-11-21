@@ -1,5 +1,5 @@
 import React from 'react';
-import { RestaurantMenuItem } from '../RestaurantMenuItem/RestaurantMenuItem.tsx';
+import { RestaurantDish } from '../RestaurantDish/RestaurantDish.tsx';
 import { MenuItem, RestaurantMenuListProps } from '../../Models/interfaces.ts';
 
 export const RestaurantMenuList: React.FC<RestaurantMenuListProps> = ({ menuItems }) => {
@@ -7,7 +7,11 @@ export const RestaurantMenuList: React.FC<RestaurantMenuListProps> = ({ menuItem
     <ol>
       {
         menuItems?.map((menu: MenuItem) => {
-          return <RestaurantMenuItem menu={menu} />
+          return (
+            <li>
+              <RestaurantDish menu={menu} />
+            </li>
+          )
         })
       }
     </ol>

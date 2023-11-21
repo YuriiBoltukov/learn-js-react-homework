@@ -9,7 +9,11 @@ export const RestaurantsList: React.FC<RestaurantsListProps> = ({ restaurants })
     <ul>
       {
         restaurants?.map((restaurant: IRestaurant) => {
-          return <Restaurant restaurant={restaurant} />
+          return (
+            <li>
+              <Restaurant restaurant={restaurant} />
+            </li>
+          )
         })
       }
     </ul>

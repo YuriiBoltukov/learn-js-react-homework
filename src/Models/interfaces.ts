@@ -25,10 +25,10 @@ export interface RestaurantProps {
 }
 
 export interface RestaurantMenuListProps {
-  menuItems: MenuItem[];
+  menu: MenuItem[];
 }
 
-export interface RestaurantMenuItemProps {
+export interface Dish {
   menu: MenuItem
 }
 

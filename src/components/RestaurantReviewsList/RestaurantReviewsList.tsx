@@ -7,7 +7,11 @@ export const RestaurantReviewsList: React.FC<RestaurantReviewsListProps> = ({ re
     <ul>
       {
         reviews?.map((item: Review) => {
-          return <RestaurantReviewsItem review={item} />
+          return (
+            <li>
+              <RestaurantReviewsItem review={item} />
+            </li>
+          )
         })
       }
     </ul>
