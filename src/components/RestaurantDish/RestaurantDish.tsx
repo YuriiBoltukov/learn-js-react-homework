@@ -1,6 +1,11 @@
-import React, {useState} from 'react';
-import { Dish } from '../../Models/interfaces.ts';
-import {Counter} from '../Counter/Counter.tsx';
+import React, { useState } from 'react';
+import { MenuItem } from '../../Models/interfaces.ts';
+import { Counter } from '../Counter/Counter.tsx';
+
+export interface Dish {
+  menu: MenuItem
+}
+
 
 export const RestaurantDish: React.FC<Dish> = ({menu}) => {
   const [count, setCount] = useState(0)

@@ -1,6 +1,9 @@
 import React from 'react';
-import { RestaurantReviewsItemProps } from '../../Models/interfaces.ts';
+import { Review } from '../../Models/interfaces.ts';
 
+export interface RestaurantReviewsItemProps {
+  review: Review
+}
 export const RestaurantReview: React.FC<RestaurantReviewsItemProps> = ({ review }) =>{
   return (
     <>

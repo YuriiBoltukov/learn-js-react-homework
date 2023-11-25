@@ -1,5 +1,9 @@
 import React from 'react';
-import { RestaurantNameProps } from '../../Models/interfaces.ts';
+
+export interface RestaurantNameProps {
+  title: string;
+  onClick: () => void;
+}
 
 export const RestaurantName: React.FC<RestaurantNameProps> = ({ title, onClick }) => {
   return (

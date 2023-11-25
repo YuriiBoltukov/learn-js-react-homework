@@ -1,7 +1,12 @@
 import React from 'react';
 import { RestaurantMenu } from '../RestaurantMenu/RestaurantMenu.tsx';
 import { RestaurantReviews } from '../RestaurantReviews/RestaurantReviews.tsx';
-import { RestaurantProps } from '../../Models/interfaces.ts';
+import { RestaurantModel } from '../../Models/interfaces.ts';
+
+export interface RestaurantProps {
+  restaurant: RestaurantModel
+}
+
 
 export const Restaurant: React.FC<RestaurantProps> = ({restaurant}) => {
   return (

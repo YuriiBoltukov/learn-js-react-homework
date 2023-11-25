@@ -1,6 +1,10 @@
-import  { ReactElement } from 'react';
-import { CounterProps } from '../../Models/interfaces.ts';
+import {ReactElement, ReactEventHandler} from 'react';
 
+export interface CounterProps {
+  count: number;
+  increment: ReactEventHandler;
+  decrement: ReactEventHandler;
+}
 export function Counter({ count, increment, decrement }: CounterProps): ReactElement {
   return (
     <div>
