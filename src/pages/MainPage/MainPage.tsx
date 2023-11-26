@@ -1,14 +1,11 @@
-import { Segments } from '../../components/Segments/Segments.tsx';
-import { restaurants } from '../../Mock/mock.ts';
-import { useState } from 'react';
-import { Restaurant } from '../../components/Restaurant/Restaurant.tsx';
-import {RestaurantModel} from '../../Models/interfaces.ts';
+import { Segments } from "../../components/Segments/Segments.tsx";
+import { restaurants } from "../../Mock/mock.ts";
+import { useState } from "react";
+import { Restaurant } from "../../components/Restaurant/Restaurant.tsx";
+import { RestaurantModel } from "../../Models/interfaces.ts";
 
 export function MainPage() {
-
   const [activeRestaurant, setActiveRestaurant] = useState<RestaurantModel>();
-
-
 
   return (
     <>
@@ -16,8 +13,7 @@ export function MainPage() {
         items={restaurants}
         onSelect={(restaurant) => setActiveRestaurant(restaurant)}
       />
-      { activeRestaurant && <Restaurant restaurant={activeRestaurant}/> }
+      {activeRestaurant && <Restaurant restaurant={activeRestaurant} />}
     </>
   );
 }
-
