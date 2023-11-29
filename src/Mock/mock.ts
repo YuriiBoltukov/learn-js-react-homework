@@ -1,6 +1,6 @@
-import {IRestaurant} from '../Models/interfaces.ts';
+import {RestaurantModel} from '../Models/interfaces.ts';
 
-export const restaurants:IRestaurant[] = [
+export const restaurants:RestaurantModel[] = [
   {
     id: "a757a0e9-03c1-4a2a-b384-8ac21dbe2fb2",
     name: "Dishoom",

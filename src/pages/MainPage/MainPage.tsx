@@ -1,14 +1,19 @@
-import { RestaurantNames } from '../../components/RestaurantNames/RestaurantNames.tsx';
-import { restaurants } from '../../Mock/mock.ts';
-import { RestaurantsList } from '../../components/RestaurantsList/RestaurantsList.tsx';
+import { Segments } from "../../components/Segments/Segments.tsx";
+import { restaurants } from "../../Mock/mock.ts";
+import { useState } from "react";
+import { Restaurant } from "../../components/Restaurant/Restaurant.tsx";
+import { RestaurantModel } from "../../Models/interfaces.ts";
 
 export function MainPage() {
-  const restaurantNames: string[] = Array.from(new Set(restaurants.map((item)=>  item.name)))
+  const [activeRestaurant, setActiveRestaurant] = useState<RestaurantModel>();
+
   return (
     <>
-      <RestaurantNames restaurantNames={restaurantNames} />
-      <RestaurantsList restaurants={restaurants} />
+      <Segments<RestaurantModel>
+        items={restaurants}
+        onSelect={(restaurant) => setActiveRestaurant(restaurant)}
+      />
+      {activeRestaurant && <Restaurant restaurant={activeRestaurant} />}
     </>
   );
 }
-

@@ -1,21 +1,26 @@
-import React from 'react';
-import { RestaurantMenuList } from '../RestaurantMenuList/RestaurantMenuList.tsx';
-import { RestaurantReviewsList } from '../RestaurantReviewsList/RestaurantReviewsList.tsx';
-import { RestaurantProps } from '../../Models/interfaces.ts';
+import React from "react";
+import { RestaurantMenu } from "../RestaurantMenu/RestaurantMenu.tsx";
+import { RestaurantReviews } from "../RestaurantReviews/RestaurantReviews.tsx";
+import { RestaurantModel } from "../../Models/interfaces.ts";
+import { ReviewForm } from "../ReviewForm/ReviewForm.tsx";
 
-export const Restaurant: React.FC<RestaurantProps> = ({restaurant}) => {
+export interface RestaurantProps {
+  restaurant: RestaurantModel;
+}
+
+export const Restaurant: React.FC<RestaurantProps> = ({ restaurant }) => {
   return (
     <>
       <h2>{restaurant.name}</h2>
       <div>
         <h3>Menu:</h3>
-        <RestaurantMenuList menu={restaurant.menu} />
+        <RestaurantMenu menu={restaurant.menu} />
       </div>
       <div>
         <h3>Reviews:</h3>
-        <RestaurantReviewsList reviews={restaurant.reviews} />
+        <RestaurantReviews reviews={restaurant.reviews} />
       </div>
+      <ReviewForm />
     </>
   );
-}
-
+};

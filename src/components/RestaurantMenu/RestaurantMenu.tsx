@@ -1,12 +1,16 @@
 import React from 'react';
 import { RestaurantDish } from '../RestaurantDish/RestaurantDish.tsx';
-import { MenuItem, RestaurantMenuListProps } from '../../Models/interfaces.ts';
+import { MenuItem } from '../../Models/interfaces.ts';
 
-export const RestaurantMenuList: React.FC<RestaurantMenuListProps> = ({ menuItems }) => {
+export interface RestaurantMenuListProps {
+  menu: MenuItem[];
+}
+
+export const RestaurantMenu: React.FC<RestaurantMenuListProps> = ({ menu }) => {
   return (
     <ol>
       {
-        menuItems?.map((menu: MenuItem) => {
+        menu?.map((menu: MenuItem) => {
           return (
             <li>
               <RestaurantDish menu={menu} />
