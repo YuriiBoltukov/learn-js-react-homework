@@ -1,4 +1,5 @@
 import { ReactElement, ReactEventHandler } from "react";
+import style from "./counter.module.scss";
 
 export interface CounterProps {
   count: number;
@@ -12,10 +13,14 @@ export function Counter({
   decrement,
 }: CounterProps): ReactElement {
   return (
-    <div>
-      <button onClick={decrement}>-</button>
-      <p>{count}</p>
-      <button onClick={increment}>+</button>
+    <div className={style.counter}>
+      <button className={style.counter_button} onClick={decrement}>
+        -
+      </button>
+      <p className={style.counter_text}>{count}</p>
+      <button className={style.counter_button} onClick={increment}>
+        +
+      </button>
     </div>
   );
 }

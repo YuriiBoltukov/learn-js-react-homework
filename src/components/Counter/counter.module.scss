@@ -1,0 +1,45 @@
+.counter {
+  display: flex;
+  align-items: center;
+  max-width: 50px;
+
+  &_button {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(to bottom, #00acee, #0072e0);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 4px 16px;
+    border-radius: 100px;
+    border: 3px solid transparent;
+    text-decoration: none;
+    background-origin: border-box;
+    margin: 0 6px;
+  }
+
+  &_button--outline {
+    background: transparent;
+    color: #0072e0;
+    border-color: #0072e0;
+  }
+
+  &_button:hover {
+    background: #1d49aa;
+  }
+
+  &_button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
+
+  &_button[disabled] {
+    color: #d2d5db;
+    background: #6c7589;
+    cursor: not-allowed;
+  }
+
+  &_text {
+    font-size: 24px;
+    margin: 0;
+  }
+}
