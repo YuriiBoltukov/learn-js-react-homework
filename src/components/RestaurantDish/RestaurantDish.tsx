@@ -1,32 +1,31 @@
-import React, { useState } from 'react';
-import { MenuItem } from '../../Models/interfaces.ts';
-import { Counter } from '../Counter/Counter.tsx';
+import React, { useState } from "react";
+import { MenuItem } from "../../Models/interfaces.ts";
+import { Counter } from "../Counter/Counter.tsx";
+import style from "./dish.module.scss";
 
 export interface Dish {
-  menu: MenuItem
+  menu: MenuItem;
 }
 
-
-export const RestaurantDish: React.FC<Dish> = ({menu}) => {
-  const [count, setCount] = useState(0)
+export const RestaurantDish: React.FC<Dish> = ({ menu }) => {
+  const [count, setCount] = useState(0);
   const increment = () => {
-    if (count === 5) return
+    if (count === 5) return;
     setCount(count + 1);
   };
 
   const decrement = () => {
-    if(count === 0) return
+    if (count === 0) return;
     setCount(count - 1);
   };
   return (
     <>
-      <div>
-        <p>Meal: {menu.name}</p>
-        <p>Price: {menu.price}</p>
+      <div className={style.dish}>
+        <p className={style.dish_title}>{menu.name}</p>
+        <p className={style.dish_price}>Price: {menu.price}</p>
         <Counter count={count} increment={increment} decrement={decrement} />
-        {count > 0 && <p>{menu.price * count}$</p>}
+        <p className={style.dish_total}>{menu.price * count} $</p>
       </div>
     </>
   );
-}
-
+};
