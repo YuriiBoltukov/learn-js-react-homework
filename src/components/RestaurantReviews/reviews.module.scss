@@ -1,0 +1,11 @@
+.review {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 16px;
+
+  &_item {
+    margin-top: 10px;
+  }
+}
