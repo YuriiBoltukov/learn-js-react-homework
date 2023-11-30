@@ -3,6 +3,7 @@ import { RestaurantMenu } from "../RestaurantMenu/RestaurantMenu.tsx";
 import { RestaurantReviews } from "../RestaurantReviews/RestaurantReviews.tsx";
 import { RestaurantModel } from "../../Models/interfaces.ts";
 import { ReviewForm } from "../ReviewForm/ReviewForm.tsx";
+import style from "./restaurant.module.scss";
 
 export interface RestaurantProps {
   restaurant: RestaurantModel;
@@ -10,7 +11,7 @@ export interface RestaurantProps {
 
 export const Restaurant: React.FC<RestaurantProps> = ({ restaurant }) => {
   return (
-    <>
+    <div className={style.restaurant}>
       <h2>{restaurant.name}</h2>
       <div>
         <h3>Menu:</h3>
@@ -21,6 +22,6 @@ export const Restaurant: React.FC<RestaurantProps> = ({ restaurant }) => {
         <RestaurantReviews reviews={restaurant.reviews} />
       </div>
       <ReviewForm />
-    </>
+    </div>
   );
 };

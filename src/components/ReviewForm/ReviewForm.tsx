@@ -2,6 +2,7 @@ import { FormEvent, useReducer } from "react";
 import { Counter } from "../Counter/Counter.tsx";
 import { SET_NAME, SET_RATING, SET_SUBMIT, SET_TEXT } from "../../constants.ts";
 import { formReducer } from "../../utils/formReducer.ts";
+import style from "./reviewForm.module.scss";
 
 export interface FormState {
   name: string;
@@ -36,37 +37,46 @@ export function ReviewForm() {
   }
 
   return (
-    <form>
-      <div>
-        <label htmlFor="name">name</label>
+    <form className={style.form}>
+      <div className={style.form_input}>
+        <label className={style.form_input_label} htmlFor="name">
+          Your name
+        </label>
         <input
           id="name"
           type="text"
           value={form.name}
+          placeholder={"Ваше имя"}
+          className={style.form_input_item}
           onChange={(event) => {
             dispatch({ type: SET_NAME, payload: event.target.value });
           }}
         />
       </div>
-      <div>
-        <label htmlFor="text">text</label>
+      <div className={style.form_input}>
+        <label className={style.form_input_label} htmlFor="text">
+          Your feedback
+        </label>
         <input
           id="text"
           type="text"
           value={form.text}
+          placeholder={"Напишите отзыв"}
+          className={style.form_input_item}
           onChange={(event) => {
             dispatch({ type: SET_TEXT, payload: event.target.value });
           }}
         />
       </div>
-      <div>
+      <div className={style.form_counter}>
+        <p>Feedback rating</p>
         <Counter
           count={form.rating}
           increment={increment}
           decrement={decrement}
         />
       </div>
-      <button type="submit" onClick={handleSubmit}>
+      <button className={style.form_btn} type="submit" onClick={handleSubmit}>
         submit
       </button>
     </form>
