@@ -1,22 +1,29 @@
-import { RestaurantName } from '../RestaurantName/RestaurantName';
+import { Segment, SegmentProps } from "../Segment/Segment.tsx";
+import style from "./segments.module.scss";
 
-interface SegmentsProps<I> {
-  items:Array<I & Segment>;
+export interface SegmentsProps<I> {
+  items: Array<I & SegmentProps>;
+  selectedItemId: string;
   onSelect: (item: I) => void;
 }
 
-interface Segment {
-name: string ; id: string
-}
-
-export function Segments <I>({ items, onSelect }: SegmentsProps<I>) {
+export function Segments<I>({
+  items,
+  onSelect,
+  selectedItemId,
+}: SegmentsProps<I>) {
   return (
-    <div>
-      {
-        items.map((item: I & Segment) => {
-          return <RestaurantName title={item.name} onClick={() => onSelect(item)} />
-        })
-      }
+    <div className={style.tabs}>
+      {items.map((item: I & SegmentProps) => {
+        return (
+          <Segment
+            key={item.id}
+            name={item.name}
+            onClick={() => onSelect(item)}
+            isActive={item.id !== undefined && item.id === selectedItemId}
+          />
+        );
+      })}
     </div>
   );
 }

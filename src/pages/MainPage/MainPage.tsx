@@ -9,9 +9,10 @@ export function MainPage() {
 
   return (
     <>
-      <Segments<RestaurantModel>
+      <Segments
         items={restaurants}
         onSelect={(restaurant) => setActiveRestaurant(restaurant)}
+        selectedItemId={activeRestaurant?.id || ""}
       />
       {activeRestaurant && <Restaurant restaurant={activeRestaurant} />}
     </>
