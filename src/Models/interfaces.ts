@@ -19,16 +19,5 @@ export interface RestaurantModel {
   name: string;
   menu: MenuItem[];
   reviews: Review[];
+  activeSegmentId?: string;
 }
-
-
-
-
-
-
-
-
-
-
-
-

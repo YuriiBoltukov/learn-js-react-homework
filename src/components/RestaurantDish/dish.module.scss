@@ -1,0 +1,21 @@
+.dish {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: center;
+
+  &_title {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &_price {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &_total {
+    margin: 0;
+    font-size: 26px;
+  }
+}

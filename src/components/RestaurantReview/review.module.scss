@@ -1,0 +1,20 @@
+.review {
+  display: flex;
+  flex-direction: column;
+
+  &_text {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &_author {
+    margin: 10px 0 0;
+    font-size: 16px;
+  }
+
+  &_grade {
+    margin: 10px 0 0;
+    font-size: 18px;
+  }
+}
