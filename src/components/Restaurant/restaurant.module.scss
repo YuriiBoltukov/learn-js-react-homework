@@ -1,3 +1,11 @@
 .restaurant {
   padding: 20px;
+
+  &_menu {
+    margin-bottom: 30px;
+  }
+
+  &_reviews {
+    margin-bottom: 30px;
+  }
 }

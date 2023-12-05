@@ -13,11 +13,11 @@ export const Restaurant: React.FC<RestaurantProps> = ({ restaurant }) => {
   return (
     <div className={style.restaurant}>
       <h2>{restaurant.name}</h2>
-      <div>
+      <div className={style.restaurant_menu}>
         <h3>Menu:</h3>
         <RestaurantMenu menu={restaurant.menu} />
       </div>
-      <div>
+      <div className={style.restaurant_reviews}>
         <h3>Reviews:</h3>
         <RestaurantReviews reviews={restaurant.reviews} />
       </div>
